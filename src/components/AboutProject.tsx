@@ -1,4 +1,4 @@
-import React from "react";
+
 import { AddressInfo, TokenInfoItem } from "../App";
 
 type InfoItem = {
