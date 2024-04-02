@@ -22,7 +22,7 @@ export const AboutProject = ({
             </div>
             <img
                 loading="lazy"
-                src="/mainImg.png"
+                src="/img1.png"
                 alt=""
                 className="w-full aspect-[1.89] max-md:max-w-full"
             />
@@ -34,15 +34,11 @@ export const AboutProject = ({
                 </div>
             </div>
             <div className="justify-center px-5 py-2.5 mt-3.5 text-base leading-6 bg-[#0c091c] text-neutral-200 max-md:max-w-full">
-                We're the team behind the successful project CrazyBunny(SOL and
-                BSC). We're excited to <br /> introduce CrazyPepe, set to make
-                waves on SOLPAD. CrazyPepe is at the forefront of our <br />{" "}
-                expanding movement. Prepare for its DEX launch, an anticipated
-                5000+ holders base, and <br /> trends across DEXTools, Twitter,
-                and Reddit with listings on CMC and CG. By joining <br />{" "}
-                CrazyPepe, backed by strategic partnerships with GotBit
-                Foundation, BabyDoge, CrazyBunny, <br /> BitcoinLFG, and Aveai,
-                you're becoming part of a movement poised for substa{" "}
+                SOLANA's First MemeVerse coin! Built by @AnyPadio core team
+                member, who made Anypad to multimillion market cap project Hold
+                Puggle & welcome 3 adorable airdrops: Pug & Beagle, rivals to
+                BabyDoge & Bonk. 🐶 🚀 Await the arrival of Father Snuggle, the
+                family's superhero, delivering unmatched perks & airdrops!
             </div>
             <div className="flex flex-col px-5 py-2.5 mt-6 bg-[#0c091c] max-md:max-w-full">
                 <div className="flex gap-5 justify-between pt-2.5 pb-3 whitespace-nowrap border-b border-solid border-slate-950 text-neutral-200 max-md:flex-wrap max-md:max-w-full">

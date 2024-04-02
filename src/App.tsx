@@ -10,6 +10,7 @@ import {
 } from "@solana/web3.js";
 import { AboutProject } from "./components/AboutProject";
 import Countdown from "react-countdown";
+import { ArrowBack } from "@mui/icons-material";
 
 interface TokenInfoItemProps {
     label: string;
@@ -60,28 +61,28 @@ const tokenInfoItems = [
     { label: "Blockchain", value: "Solana" },
     {
         label: "Tokens for PreSale",
-        value: "277,402,986,000,000 CrazyPepe",
+        value: "70,000,000 PUGGLE",
     },
     {
         label: "Tokens For Liquidity",
-        value: "39,529,925,505,000 CrazyPepe",
+        value: "13,300,000 PUGGLE",
     },
-    { label: "Liquidity Percent", value: "15 %" },
+    { label: "Liquidity Percent", value: "20 %" },
     { label: "Liquidity Listing", value: "Manual" },
-    { label: "PreSale Rate", value: "1 SOL = 138701493000 CrazyPepe" },
-    { label: "Listing Rate", value: "1 SOL = 138701493000 CrazyPepe" },
+    { label: "PreSale Rate", value: "1 SOL = 35000 PUGGLE" },
+    { label: "Listing Rate", value: "1 SOL = 35000 PUGGLE" },
     { label: "Sale method", value: "PreSale" },
     { label: "Softcap", value: "500 SOL" },
     { label: "Hardcap", value: "2000 SOL" },
     {
         label: "Initial MarketCap (estimate)",
-        value: "$578,161.97",
+        value: "$517,685.71",
     },
     { label: "Unsold tokens", value: "Refund" },
-    { label: "Minimum buy", value: "0.5 SOL" },
-    { label: "Maximum buy", value: "15 SOL" },
-    { label: "Start time", value: "26.03.2024, 15:00:00" },
-    { label: "End time", value: "28.03.2024, 15:00:00" },
+    { label: "Minimum buy", value: "0.1 SOL" },
+    { label: "Maximum buy", value: "12 SOL" },
+    { label: "Start time", value: "02.04.2024, 19:00:00" },
+    { label: "End time", value: "05.04.2024, 01:00:00" },
 ];
 
 const rpcConnection = new web3.Connection(process.env.RPC!, "confirmed");
@@ -163,7 +164,7 @@ const App: React.FC = () => {
                 <div className="flex gap-2.5 px-5 py-2.5 bg-slate-800 rounded-[50px_0px_0px_50px] text-neutral-200">
                     <img
                         loading="lazy"
-                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/2b158f18f9ddda209d955af6610221f562f06d35a50e9053db1fe45571ac957b?apiKey=6e3e8087278f4e9d922cc19244d71dbb&"
+                        src="public/solpad.png"
                         alt=""
                         className="shrink-0 aspect-[1.28] w-[50px]"
                     />
@@ -171,12 +172,7 @@ const App: React.FC = () => {
                 </div>
             </div>
             <div className="flex gap-5 self-start mt-5 text-base tracking-normal leading-6 whitespace-nowrap text-neutral-200">
-                <img
-                    loading="lazy"
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/6bd4bea78ad5cd35f279c2c268128df02f5c578f259852bc78fe3b1f1f6b0f99?apiKey=6e3e8087278f4e9d922cc19244d71dbb&"
-                    alt=""
-                    className="shrink-0 w-6 aspect-square"
-                />
+                <ArrowBack />
                 <div>Back</div>
             </div>
             <main className="justify-center mt-5 max-md:max-w-full">
@@ -209,13 +205,13 @@ const App: React.FC = () => {
                                     <div>
                                         Min{" "}
                                         <span className="text-[#c685f3]">
-                                            0.5 SOL
+                                            0.1 SOL
                                         </span>
                                     </div>
                                     <div>
                                         Max{" "}
                                         <span className="text-[#c685f3]">
-                                            15 SOL
+                                            12 SOL
                                         </span>
                                     </div>
                                 </div>
@@ -261,15 +257,15 @@ const App: React.FC = () => {
                             <div className="flex flex-col px-5 py-2.5 mt-2.5 w-full text-sm tracking-normal leading-5 bg-[#0c091c] text-neutral-200">
                                 <div className="flex gap-5 justify-between pt-2.5 pb-3 border-b border-solid border-slate-950 text-[12.8px]">
                                     <div>Sale Type</div>
-                                    <div>Whitelist</div>
+                                    <div>Public</div>
                                 </div>
                                 <div className="flex gap-5 justify-between pt-2.5 pb-3 border-b border-solid border-slate-950 text-[12.8px]">
                                     <div>Current Ratio</div>
-                                    <div>1 SOL = 138701493000 CrazyPepe</div>
+                                    <div>1 SOL = 35000 PUGGLE</div>
                                 </div>
                                 <div className="flex gap-5 justify-between pt-2.5 pb-3 border-b border-solid border-slate-950 text-[12.8px]">
                                     <div>Total Supply</div>
-                                    <div>420,690,000,000,000</div>
+                                    <div>100.000.000</div>
                                 </div>
                                 <div className="flex gap-5 justify-between pt-2.5 pb-3 whitespace-nowrap border-b border-solid border-slate-950 text-[12.8px]">
                                     <div>Holders</div>
@@ -277,11 +273,11 @@ const App: React.FC = () => {
                                 </div>
                                 <div className="flex gap-5 justify-between pt-2.5 pb-3 border-b border-solid border-slate-950 text-[12.8px]">
                                     <div>Minimum buy</div>
-                                    <div>0.5 SOL</div>
+                                    <div>0.1 SOL</div>
                                 </div>
                                 <div className="flex gap-5 justify-between pt-2.5 pb-3 border-b border-solid border-slate-950 text-[12.8px]">
                                     <div>Maximum buy</div>
-                                    <div>15 SOL</div>
+                                    <div>12 SOL</div>
                                 </div>
                             </div>
                             <div className="flex flex-col px-5 pt-2.5 pb-20 mt-2.5 w-full bg-[#0c091c]">
