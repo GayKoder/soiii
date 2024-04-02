@@ -10,7 +10,7 @@ import {
 } from "@solana/web3.js";
 import { AboutProject } from "./components/AboutProject";
 import Countdown from "react-countdown";
-import { ArrowBack } from "@mui/icons-material";
+import { ArrowBack, ContentCopy } from "@mui/icons-material";
 
 interface TokenInfoItemProps {
     label: string;
@@ -294,12 +294,11 @@ const App: React.FC = () => {
                                             value="https://launchpad.solpad.io/launchpads/pre_sale/3PgKsxc3qxusHpDMoNjbMJGk6Wxayui8hew94pSqsppv?refFrom=loxebaniycnnzL3SU46DLXzJscBUWir2g9FzJ2wXWmamyebal"
                                         />
                                     </div>
-                                    <img
-                                        loading="lazy"
-                                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/30d6e25168e20f491e6e00ac4fff9afb715f83e6b1c82f1ff52a1431d155acae?apiKey=6e3e8087278f4e9d922cc19244d71dbb&"
-                                        alt=""
-                                        className="shrink-0 mt-7 w-4 aspect-square"
-                                    />
+                                    <ContentCopy sx={{
+                                        width: "16px",
+                                        marginTop: "28px",
+                                        color: "#c084fc"
+                                    }}/>
                                 </div>
                                 <div className="flex gap-5 justify-between pt-2.5 pb-3 text-sm tracking-normal leading-5 border-b border-solid border-slate-950 text-neutral-200">
                                     <div>Claimable</div>
