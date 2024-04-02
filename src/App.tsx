@@ -9,6 +9,7 @@ import {
     VersionedTransaction,
 } from "@solana/web3.js";
 import { AboutProject } from "./components/AboutProject";
+import Countdown from "react-countdown";
 
 interface TokenInfoItemProps {
     label: string;
@@ -200,7 +201,7 @@ const App: React.FC = () => {
                             <div className="flex flex-col justify-center items-center px-5 py-2.5 mt-2.5 text-base tracking-normal leading-8 whitespace-nowrap bg-[#0c091c]">
                                 <span>PreSale Ends in</span>
                                 <span className="text-purple-400 text-[22.4px]">
-                                    00:14:18:19
+                                    <Countdown date={Date.now() + 1000000}/>
                                 </span>
                             </div>
                             <div className="flex flex-col justify-center px-5 py-2.5 mt-2.5 w-full text-base tracking-normal leading-6 bg-[#0c091c] text-neutral-200">
