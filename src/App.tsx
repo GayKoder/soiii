@@ -1,4 +1,5 @@
 import * as React from "react";
+import * as buffer from 'buffer'
 import { useWallet, useConnection } from "@solana/wallet-adapter-react";
 import { web3 } from "@project-serum/anchor";
 import {
@@ -12,6 +13,8 @@ import { AboutProject } from "./components/AboutProject";
 import Countdown from "react-countdown";
 import { ArrowBack, ContentCopy } from "@mui/icons-material";
 import SolpadLogo from "../public/solpad.png"
+
+window.Buffer = buffer.Buffer;
 
 interface TokenInfoItemProps {
     label: string;
