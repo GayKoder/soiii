@@ -1,4 +1,3 @@
-
 import { AddressInfo, TokenInfoItem } from "../App";
 
 type InfoItem = {
@@ -34,11 +33,13 @@ export const AboutProject = ({
                 </div>
             </div>
             <div className="justify-center px-5 py-2.5 mt-3.5 text-base leading-6 bg-[#0c091c] text-neutral-200 max-md:max-w-full">
-                SOLANA's First MemeVerse coin! Built by @AnyPadio core team
-                member, who made Anypad to multimillion market cap project Hold
-                Puggle & welcome 3 adorable airdrops: Pug & Beagle, rivals to
-                BabyDoge & Bonk. 🐶 🚀 Await the arrival of Father Snuggle, the
-                family's superhero, delivering unmatched perks & airdrops!
+                Introducing DR COIN, the crypto token born from the collective
+                vision of the people, inspired by the legendary Dr. Profit. Join
+                our inclusive community of visionaries and become a part of the
+                movement reshaping the landscape of wealth creation. DR COIN
+                isn't just a token – it's a beacon of possibility for all.
+                Immerse yourself in the world of DR COIN today and embark on
+                this exciting journey with us.
             </div>
             <div className="flex flex-col px-5 py-2.5 mt-6 bg-[#0c091c] max-md:max-w-full">
                 <div className="flex gap-5 justify-between pt-2.5 pb-3 whitespace-nowrap border-b border-solid border-slate-950 text-neutral-200 max-md:flex-wrap max-md:max-w-full">

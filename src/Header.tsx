@@ -53,7 +53,8 @@ function Header() {
                 <WalletMultiButton style={{
                     backgroundColor: "#c685f3",
                     color: "#090619",
-                    padding: "9px 19px",
+                    fontWeight: "normal",
+                    padding: "1px 19px",
                     width: "auto"
                 }}/>
             </div>

