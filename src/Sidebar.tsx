@@ -20,6 +20,8 @@ import {
     Toolbar,
 } from "@mui/material";
 
+import SolpadLogo from "../public/solpad.png"
+
 import List from "@mui/material/List";
 
 import ListItemButton from "@mui/material/ListItemButton";
@@ -158,7 +160,7 @@ function Sidebar() {
             >
                 <Toolbar className="flex flex-col justify-center pt-2">
                     <img
-                        src="public/solpad.png"
+                        src={SolpadLogo}
                         alt="SPAD logo"
                         className="self-center max-w-full aspect-[1.25] w-[100px]"
                     />

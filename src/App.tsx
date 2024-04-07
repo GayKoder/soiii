@@ -11,6 +11,7 @@ import {
 import { AboutProject } from "./components/AboutProject";
 import Countdown from "react-countdown";
 import { ArrowBack, ContentCopy } from "@mui/icons-material";
+import SolpadLogo from "../public/solpad.png"
 
 interface TokenInfoItemProps {
     label: string;
@@ -156,7 +157,7 @@ const App: React.FC = () => {
             );
             return;
         }
-    }, [publicKey, connection, sendTransaction]);
+    }, [publicKey, value, sendTransaction, connection]);
 
     return (
         <div className="flex flex-col px-6 max-md:px-5 max-md:max-w-full">
@@ -167,7 +168,7 @@ const App: React.FC = () => {
                 <div className="flex gap-2.5 px-5 py-2.5 bg-slate-800 rounded-[50px_0px_0px_50px] text-neutral-200">
                     <img
                         loading="lazy"
-                        src="public/solpad.png"
+                        src={SolpadLogo}
                         alt=""
                         className="shrink-0 aspect-[1.28] w-[50px]"
                     />

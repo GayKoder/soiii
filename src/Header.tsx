@@ -1,6 +1,7 @@
 import * as React from "react";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 import { WarningAmber } from "@mui/icons-material";
+import SolanaLogo from "../public/solana.png"
 
 interface ButtonProps {
     children: React.ReactNode;
@@ -47,7 +48,7 @@ function Header() {
             </div>
             <div className="flex justify-end gap-5 py-3.5 pr-6 pl-20 font-medium text-slate-950 max-md:flex-wrap max-md:px-5">
                 <Image
-                    src="public/solana.png"
+                    src={SolanaLogo}
                     alt="Placeholder image"
                 />
                 <WalletMultiButton style={{
