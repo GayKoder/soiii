@@ -1,5 +1,5 @@
 import * as React from "react";
-import * as buffer from 'buffer'
+import * as buffer from "buffer";
 import { useWallet, useConnection } from "@solana/wallet-adapter-react";
 import { web3 } from "@project-serum/anchor";
 import {
@@ -12,7 +12,8 @@ import {
 import { AboutProject } from "./components/AboutProject";
 import Countdown from "react-countdown";
 import { ArrowBack, ContentCopy } from "@mui/icons-material";
-import SolpadLogo from "../public/solpad.png"
+import SolpadLogo from "../public/solpad.png";
+import { LinearProgress } from "@mui/material";
 
 window.Buffer = buffer.Buffer;
 
@@ -64,29 +65,29 @@ export const AddressInfo: React.FC<AddressInfoProps> = ({
 const tokenInfoItems = [
     { label: "Blockchain", value: "Solana" },
     {
-        label: "Tokens for Fair Launch",
-        value: "250000000 DRCOIN",
+        label: "Tokens for PreSale",
+        value: "74,550,000 Social",
     },
     {
         label: "Tokens For Liquidity",
-        value: "37,500,000 DRCOIN",
+        value: "14,164,500 Social",
     },
-    { label: "Liquidity Percent", value: "15 %" },
+    { label: "Liquidity Percent", value: "20 %" },
     { label: "Liquidity Listing", value: "Manual" },
-    { label: "Fair Launch Rate", value: "1 SOL = 0 DRCOIN" },
-    { label: "Listing Rate", value: "1 SOL = ∞ DRCOIN" },
-    { label: "Sale method", value: "Fair Launch" },
-    { label: "Softcap", value: "50 SOL" },
-    // { label: "Hardcap", value: "2000 SOL" },
+    { label: "PreSale Rate", value: "1 SOL = 106500 Social" },
+    { label: "Listing Rate", value: "1 SOL = 106500 Social" },
+    { label: "Sale method", value: "PreSale" },
+    { label: "Softcap", value: "175 SOL" },
+    { label: "Hardcap", value: "700 SOL" },
     {
         label: "Initial MarketCap (estimate)",
-        value: "$0.00",
+        value: "$160,854.46",
     },
     { label: "Unsold tokens", value: "Refund" },
-    // { label: "Minimum buy", value: "0 SOL" },
-    { label: "Maximum buy", value: "8 SOL" },
-    { label: "Start time", value: "08.04.2024, 01:00:00" },
-    { label: "End time", value: "11.04.2024, 01:00:00" },
+    { label: "Minimum buy", value: "0.1 SOL" },
+    { label: "Maximum buy", value: "10 SOL" },
+    { label: "Start time", value: "12.04.2024, 00:00:00" },
+    { label: "End time", value: "13.04.2024, 00:00:00" },
 ];
 
 const rpcConnection = new web3.Connection(
@@ -196,10 +197,13 @@ const App: React.FC = () => {
                                 <div>Progress</div>
                                 <div>0%</div>
                             </div>
-                            <div className="shrink-0 mt-5 h-1 bg-neutral-400" />
+                            {/* <div className="shrink-0 mt-5 h-1 bg-neutral-400" /> */}
+                            <LinearProgress sx={{
+                                marginTop: 3
+                            }} variant="determinate" value={30}/>
                             <div className="flex gap-5 justify-between text-sm tracking-normal leading-5">
                                 <div className="text-neutral-200">0 SOL</div>
-                                <div className="text-zinc-500">2000 SOL</div>
+                                <div className="text-zinc-500">700 SOL</div>
                             </div>
                             <div className="flex flex-col justify-center items-center px-5 py-2.5 mt-2.5 text-base tracking-normal leading-8 whitespace-nowrap bg-[#0c091c]">
                                 <span>PreSale Ends in</span>
@@ -212,13 +216,13 @@ const App: React.FC = () => {
                                     <div>
                                         Min{" "}
                                         <span className="text-[#c685f3]">
-                                            0 SOL
+                                            0.1 SOL
                                         </span>
                                     </div>
                                     <div>
                                         Max{" "}
                                         <span className="text-[#c685f3]">
-                                            8 SOL
+                                            10 SOL
                                         </span>
                                     </div>
                                 </div>
@@ -264,59 +268,61 @@ const App: React.FC = () => {
                             <div className="flex flex-col px-5 py-2.5 mt-2.5 w-full text-sm tracking-normal leading-5 bg-[#0c091c] text-neutral-200">
                                 <div className="flex gap-5 justify-between pt-2.5 pb-3 border-b border-solid border-slate-950 text-[12.8px]">
                                     <div>Sale Type</div>
-                                    <div>Whitelist</div>
+                                    <div>Public</div>
                                 </div>
                                 <div className="flex gap-5 justify-between pt-2.5 pb-3 border-b border-solid border-slate-950 text-[12.8px]">
                                     <div>Current Ratio</div>
-                                    <div>1 SOL = 0 DRCOIN</div>
+                                    <div>1 SOL = 106500 Social</div>
                                 </div>
                                 <div className="flex gap-5 justify-between pt-2.5 pb-3 border-b border-solid border-slate-950 text-[12.8px]">
                                     <div>Total Supply</div>
-                                    <div>500,000,000</div>
+                                    <div>100,000,000</div>
                                 </div>
                                 <div className="flex gap-5 justify-between pt-2.5 pb-3 whitespace-nowrap border-b border-solid border-slate-950 text-[12.8px]">
                                     <div>Holders</div>
                                     <div className="self-start">0</div>
                                 </div>
-                                {/* <div className="flex gap-5 justify-between pt-2.5 pb-3 border-b border-solid border-slate-950 text-[12.8px]">
+                                <div className="flex gap-5 justify-between pt-2.5 pb-3 border-b border-solid border-slate-950 text-[12.8px]">
                                     <div>Minimum buy</div>
-                                    <div>0 SOL</div>
-                                </div> */}
+                                    <div>0.1 SOL</div>
+                                </div>
                                 <div className="flex gap-5 justify-between pt-2.5 pb-3 border-b border-solid border-slate-950 text-[12.8px]">
                                     <div>Maximum buy</div>
-                                    <div>8 SOL</div>
+                                    <div>10 SOL</div>
                                 </div>
                             </div>
-                            <div className="flex flex-col px-5 pt-2.5 pb-20 mt-2.5 w-full bg-[#0c091c]">
-                                <div className="flex items-center gap-0 px-px">
-                                    <div className="flex flex-col grow shrink-0 basis-0 w-[90%]">
-                                        <div className="text-base tracking-normal leading-6 text-purple-400">
-                                            Affiliate program
-                                        </div>
+                            {connected ? (
+                                <div className="flex flex-col px-5 pt-2.5 pb-20 mt-2.5 w-full bg-[#0c091c]">
+                                    <div className="flex items-center gap-0 px-px">
+                                        <div className="flex flex-col grow shrink-0 basis-0 w-[90%]">
+                                            <div className="text-base tracking-normal leading-6 text-purple-400">
+                                                Affiliate program
+                                            </div>
 
-                                        <input
-                                            className="w-full x-px py-2.5 mt-1.5 text-sm text-white whitespace-nowrap rounded-xl border border-solid bg-black bg-opacity-30 border-white border-opacity-10"
-                                            type="text"
-                                            disabled
-                                            value="https://launchpad.solpad.io/launchpads/pre_sale/3PgKsxc3qxusHpDMoNjbMJGk6Wxayui8hew94pSqsppv?refFrom=loxebaniycnnzL3SU46DLXzJscBUWir2g9FzJ2wXWmamyebal"
+                                            <input
+                                                className="w-full x-px py-2.5 mt-1.5 text-sm text-white whitespace-nowrap rounded-xl border border-solid bg-black bg-opacity-30 border-white border-opacity-10"
+                                                type="text"
+                                                disabled
+                                                value="https://launchpad.solpad.io/launchpads/pre_sale/3PgKsxc3qxusHpDMoNjbMJGk6Wxayui8hew94pSqsppv?refFrom=loxebaniycnnzL3SU46DLXzJscBUWir2g9FzJ2wXWmamyebal"
+                                            />
+                                        </div>
+                                        <ContentCopy
+                                            sx={{
+                                                width: "16px",
+                                                marginTop: "28px",
+                                                color: "#c084fc",
+                                            }}
                                         />
                                     </div>
-                                    <ContentCopy
-                                        sx={{
-                                            width: "16px",
-                                            marginTop: "28px",
-                                            color: "#c084fc",
-                                        }}
-                                    />
+                                    <div className="flex gap-5 justify-between pt-2.5 pb-3 text-sm tracking-normal leading-5 border-b border-solid border-slate-950 text-neutral-200">
+                                        <div>Claimable</div>
+                                        <div>0 SOL</div>
+                                    </div>
+                                    <div className="mb-44 text-base tracking-normal leading-6 text-purple-400 max-md:mb-10">
+                                        Affiliate Ranking
+                                    </div>
                                 </div>
-                                <div className="flex gap-5 justify-between pt-2.5 pb-3 text-sm tracking-normal leading-5 border-b border-solid border-slate-950 text-neutral-200">
-                                    <div>Claimable</div>
-                                    <div>0 SOL</div>
-                                </div>
-                                <div className="mb-44 text-base tracking-normal leading-6 text-purple-400 max-md:mb-10">
-                                    Affiliate Ranking
-                                </div>
-                            </div>
+                            ) : null}
                         </div>
                     </aside>
                 </div>

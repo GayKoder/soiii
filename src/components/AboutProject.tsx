@@ -33,13 +33,13 @@ export const AboutProject = ({
                 </div>
             </div>
             <div className="justify-center px-5 py-2.5 mt-3.5 text-base leading-6 bg-[#0c091c] text-neutral-200 max-md:max-w-full">
-                Introducing DR COIN, the crypto token born from the collective
-                vision of the people, inspired by the legendary Dr. Profit. Join
-                our inclusive community of visionaries and become a part of the
-                movement reshaping the landscape of wealth creation. DR COIN
-                isn't just a token – it's a beacon of possibility for all.
-                Immerse yourself in the world of DR COIN today and embark on
-                this exciting journey with us.
+                SolSocial is a cutting-edge decentralized social media platform
+                on the Solana blockchain, redefining digital interaction (Crypto
+                version of Facebook). It empowers users with control over data
+                and privacy. With robust features, it offers a rewarding and
+                transparent user experience. Join us in revolutionizing social
+                media! 🚀 Privacy-centric ✅ Social-to-earn ✅ Transparent
+                transactions ✅ Product live at https://app.solsocial.life ✅
             </div>
             <div className="flex flex-col px-5 py-2.5 mt-6 bg-[#0c091c] max-md:max-w-full">
                 <div className="flex gap-5 justify-between pt-2.5 pb-3 whitespace-nowrap border-b border-solid border-slate-950 text-neutral-200 max-md:flex-wrap max-md:max-w-full">
